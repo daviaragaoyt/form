@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <form onsubmit="submitFormulario(event)"
-    action="">
-    <div class="container">
-        <div class="login">
-            <h1>Bem-Vindo</h1>
-            <h2>Preencha o formulario por favor!</h2>
-            <input type="text" class="name" name="nome"
-                placeholder="Digite seu nome" />
-            <input type="date" class="data"
-                placeholder="Data de Nascimento" />
-            <input type="email" class="email"
-                placeholder="Digite seu email" />
-            <input type="password" class="Senha" placeholder="Senha" />
-            <input type="submit" class="submit" />
-        </div>
-        </div>
-    </div>
-</form>
-<script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <form onsubmit="submitFormulario(event)"
+            action>
+            <div class="container">
+                <div class="login">
+                    <h1>Formulario Veterinario</h1>
+                    <h2>Informações do Proprietário:</h2>
+                    <label for="nome"><strong>Nome:</strong></label>
+                    <input type="text" class="name" name="nome" />
+                    <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                    <input type="text" class="sobrenome" name="sobrenome" />
+                    <label for="email"><strong>Email:</strong></label>
+                    <input type="email" class="email"/>
+                    <label for="numero"><strong>Numero:</strong></label>
+                    <input type="tel" class="tel" name="tel" />
+                    <br>
+                    <label for="pagament"><strong>Forma de pagamento:</strong></label>
+                    <select id="opcoes" onchange="alterarClass()">
+                        <option selected disabled value>Selecione</option>
+                        <option value="debito" class="debito">Debito</option>
+                        <option value="credito" class="credito">Credito</option>
+                        <option value="boleto" class="boleto">Boleto</option>
+                        <option value="pix" class="pix">Pix</option>
+                    </select>
+                    <input type="submit" class="submit"/>
+                </div>
+            </div>
+        </form>
+
+        <script src="script.js"></script>
+    </body>
 </html>
