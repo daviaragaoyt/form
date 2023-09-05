@@ -63,7 +63,7 @@
                         <option value="outro" class="outro">outro</option>
                     </select>
                     <!--SE FOR PASSARO-->
-                    <select id="opcao2" onchange="alterarClass()">
+                    <select id="opcao3" onchange="alterarClass()">
                         <option selected disabled value>Selecione</option>
                         <option value="canariobelga" class="canariobelga">Canário-belga</option>
                         <option value="calopsita" class="calopsita">Calopsita</option>
@@ -79,7 +79,7 @@
                     </select>
 
                     <!--SE FOR REPTIL-->
-                    <select id="opcao2" onchange="alterarClass()">
+                    <select id="opcao4" onchange="alterarClass()">
                         <option selected disabled value>Selecione</option>
                         <option value="turtle" class="turtle">Tartarugas</option>
                         <option value="iguana" class="iguana">Iguanas</option>
@@ -88,11 +88,23 @@
                         <option value="lagarto" class="lagarto">Lagartos</option>
                     </select>
 
-                    <input type="submit" class="submit" />
-                </div>
-            </div>
-        </form>
+                    <!--IDADE-->
+                    <label for="idade"><strong>Idade do pet:</strong></label>
+                    <input type="number" class="idade" name="idade" />
+                    <div>
 
-        <script src="vet.js"></script>
-    </body>
-</html>
+                        <!--SEXO-->
+                        <select id="opcao5" onchange="alterarClass()">
+                            <option selected disabled value>Selecione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+
+                        <input type="submit" class="submit" />
+                    </div>
+                </div>
+            </form>
+
+            <script src="vet.js"></script>
+        </body>
+    </html>
