@@ -6,6 +6,7 @@ const spbrenomeInput = document.querySelector("sobrenome");
 const emailInput = document.querySelector("email");
 const senhaInput = document.querySelector("tel");
 
+
 function submitFormulario(event) {
 
 
@@ -38,7 +39,7 @@ function submitFormulario(event) {
         return;
     }
 
-    
+
 }
 
 //cria um regex para validar email
@@ -56,45 +57,33 @@ function isEmailValid(email) {
     return false;
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const animalSelect = document.getElementById("animal");
+    const opcao1 = document.getElementById("opcao1");
+    const opcao2 = document.getElementById("opcao2");
+
+    // Função para mostrar ou ocultar as opções com base na escolha do usuário
+    function mostrarOcultarOpcoes() {
+        const escolha = animalSelect.value;
+        opcao1.style.display = escolha === "opcao1-cachorro" ? "block" : "none";
+        opcao2.style.display = escolha === "opcao2-gato" ? "block" : "none";
+    }
+
+    // Adicionar um ouvinte de evento para o evento "change" no select do animal
+    animalSelect.addEventListener("change", mostrarOcultarOpcoes);
+
+    // Executar a função inicialmente para configurar o estado inicial
+    mostrarOcultarOpcoes();
+});
+
 /*Função que valida a senha
 
 function validaPassword(senha, minDigits) {
 
-    if (senha.length >= minDigits) {
-        return false
-    }
-    //Senhas invalidas
-    return true
+  if (senha.length >= minDigits) {
+      return false
+  }
+  //Senhas invalidas
+  return true
 }
 */
-// debugger=opcao1,opcao2,opcao3,opcao4;
-
-function alterarClass() {
-    if (document.getElementById("opcoes").value == "Cão") {
-      document.getElementById("opcao1").className = "cachorro";
-      document.getElementById("botaoEnviar").className = "cachorro";
-  
-      document.getElementById('form').action =active.opcao1;
-    }
-  
-    if (document.getElementById("opcoes").value == "Gato") {
-      document.getElementById("opcao2").className = "cat";
-      document.getElementById("botaoEnviar").className = "cat";
-  
-      document.getElementById('form').action = active.opcao2;
-    }
-
-    if (document.getElementById("opcoes").value == "Pássaro") {
-        document.getElementById("opcao3").className = "pombo";
-        document.getElementById("botaoEnviar").className = "pombo";
-    
-        document.getElementById('form').action = active.opcao3;
-      }
-
-      if (document.getElementById("opcoes").value == "Répitil") {
-        document.getElementById("opcao4").className = "cobrinha";
-        document.getElementById("botaoEnviar").className = "cobrinha";
-    
-        document.getElementById('form').action = active.opcao4;
-      }
-  }

@@ -25,39 +25,46 @@
 
                     <!--FORMULARIO DO PET-->
                     <h1>Informações do paciente:</h1>
+
                     <!--NOME-->
                     <label for="nome"><strong>Nome do pet:</strong></label>
                     <input type="text" class="name" name="nome" />
+
                     <!--ESPECIE-->
-                    <label for="especie"><strong>Especie:</strong></label>
-                    <select id="opcoes" onchange="alterarClass()">
+                    <label for="animal">Escolha um animal:</label>
+                    <select id="animal" class="escolha">
                         <option selected disabled value>Selecione</option>
-                        <option value="cachorro" class="cao">Cão</option>
-                        <option value="gato" class="gato">Gato</option>
+                        <option value="opcao1-cachorro">Cachorro</option>
+                        <option value="opcao2-gato">Gato</option>
                     </select>
                     <!--SE FOR CACHORRO-->
-                    <label for="raca"><strong>Raça:</strong></label>
-                    <select id="opcao1" class="cachorro"
-                        onchange="alterarClass()">
-                        <option selected disabled value>Selecione</option>
-                        <option value="caramelo" class="caramelo">Caramelo</option>
-                        <option value="poodle" class="poodle">Poodle</option>
-                        <option value="labrador" class="labrador">Labrador
-                            Retriever</option>
-                        <option value="bullgodI" class="bulldogI">Bulldog Inglês</option>
-                        <option value="yorkshire" class="yorkshire">Yorkshire
-                            Terrier:</option>
-                        <option value="shitzu" class="shitzu">Shih Tzu</option>
-                        <option value="chihuahua" class="chihuahua">Chihuahua</option>
-                        <option value="goldenR" class="goldenR">Golden Retriever</option>
-                        <option value="rottweiler" class="rottweiler">Rottweiler</option>
-                        <option value="bulldogF" class="bulldogF">Bulldog
-                            Francês</option>
-                        <option value="outro" class="outro">outro</option>
-                    </select>
-                    <!--SE FOR GATO-->
-                    <select id="opcao2" class="cat" onchange="alterarClass()">
-                        <option selected disabled value>Selecione</option>
+                    <div id="opcao1" class="cachorro opcoes">
+                        <label for="racaCachorro">Escolha a raça do cachorro:</label>
+                        <select id="racaCachorro">
+                            <option selected disabled value>Selecione</option>
+                            <option value="caramelo" class="caramelo">Caramelo</option>
+                            <option value="poodle" class="poodle">Poodle</option>
+                            <option value="labrador" class="labrador">Labrador
+                                Retriever</option>
+                            <option value="bullgodI" class="bulldogI">Bulldog
+                                Inglês</option>
+                            <option value="yorkshire" class="yorkshire">Yorkshire
+                                Terrier:</option>
+                            <option value="shitzu" class="shitzu">Shih Tzu</option>
+                            <option value="chihuahua" class="chihuahua">Chihuahua</option>
+                            <option value="goldenR" class="goldenR">Golden
+                                Retriever</option>
+                            <option value="rottweiler" class="rottweiler">Rottweiler</option>
+                            <option value="bulldogF" class="bulldogF">Bulldog
+                                Francês</option>
+                            <option value="outro" class="outro">outro</option>
+                        </select>
+                    </div>
+                        <!--SE FOR GATO-->
+                    <div id="opcao2" class="gato opcoes">
+                        <label for="racaGato">Escolha a raça do gato:</label>
+                        <select id="racaGato">
+                            ption selected disabled value>Selecione</option>
                         <option value="vira-lata" class="vira-lata">Vira-lata</option>
                         <option value="siamese" class="siamese">Siamese</option>
                         <option value="persa" class="persa">Persa</option>
@@ -71,7 +78,9 @@
                         <option value="forest" class="forest">Norwegian Forest
                             Cat</option>
                         <option value="outro" class="outro">outro</option>
-                    </select>
+                        </select>
+                    </div>
+
                     <input type="submit" class="submit" />
                 </div>
             </div>
