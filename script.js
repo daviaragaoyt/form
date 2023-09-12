@@ -66,13 +66,35 @@ function validaPassword(senha, minDigits) {
     //Senhas invalidas
     return true
 }
+*/
+// debugger=opcao1,opcao2,opcao3,opcao4;
 
-const sabre = document.getElementById("sabre");
+function alterarClass() {
+    if (document.getElementById("opcoes").value == "Cão") {
+      document.getElementById("opcao1").className = "cachorro";
+      document.getElementById("botaoEnviar").className = "cachorro";
+  
+      document.getElementById('form').action =active.opcao1;
+    }
+  
+    if (document.getElementById("opcoes").value == "Gato") {
+      document.getElementById("opcao2").className = "cat";
+      document.getElementById("botaoEnviar").className = "cat";
+  
+      document.getElementById('form').action = active.opcao2;
+    }
 
-sabre.addEventListener("mouseenter", () => {
- sabre.classList.add("active");
-});
+    if (document.getElementById("opcoes").value == "Pássaro") {
+        document.getElementById("opcao3").className = "pombo";
+        document.getElementById("botaoEnviar").className = "pombo";
+    
+        document.getElementById('form').action = active.opcao3;
+      }
 
-sabre.addEventListener("mouseleave", () => {
-  sabre.classList.remove("active");
-});*/
+      if (document.getElementById("opcoes").value == "Répitil") {
+        document.getElementById("opcao4").className = "cobrinha";
+        document.getElementById("botaoEnviar").className = "cobrinha";
+    
+        document.getElementById('form').action = active.opcao4;
+      }
+  }
